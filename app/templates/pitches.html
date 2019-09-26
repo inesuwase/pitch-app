@@ -1,15 +1,12 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 {% extends 'bootstrap/base.html' %}
 {% include 'navbar.html'%}
-
-
-
-
+{% import 'macros.html' as macro%}
 {% block content %}
 <div class="container">
 	<div class="row">
 		<div class="jumbotron">
-				{{wtf.quick_form(form)}}
+				{{wtf.quick_form(pitch_form)}}
 		<ul style="list-style: none;">
 				{% for pitch in pitches %}
 					<div class="list-group">
